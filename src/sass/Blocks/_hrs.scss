@@ -1,0 +1,47 @@
+.hrs {
+    position: absolute;
+    background-color: $main-color;
+    margin: 0px;
+    opacity: 1;
+    &__vertical {
+        width: 1px;
+        height: 0%;
+        transition: 0.5s all;
+        &_pt150 {
+            animation: VertPt150 2s ease forwards;
+            margin-top: 5px;
+            left: 23px;
+            // height: calc(100% - 155px);
+            
+        }   
+        &_menu {
+            left: 6.5px;
+            top: 40px;
+            z-index: -1;
+        }    
+    }
+    &__horizontal {   
+        height: 1px;
+        width: 0%;
+        transition: 0.5s all;
+        &_head {
+            height: 1px;
+            animation: head 2s 0.5s ease forwards;
+            top: 57.8px;
+            right: 81px;
+            // width: 40%;
+        }      
+        &_pt150 {
+            animation: HorPt150 2s 0.5s ease forwards;
+            // width: calc(100% - 640px);
+            margin-left: 16px;
+            top: 275px;
+        }
+        &_menu {
+            left: 6.5px;
+            top: 53px;
+            z-index: -1;
+        }  
+    }
+    
+}

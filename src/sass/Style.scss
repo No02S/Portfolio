@@ -1,12 +1,16 @@
+@import "Basse/mixins";
+@import "Basse/variables";
+@import "Basse/animations";
 @import "libs/animate.min";
 @import "libs/bootstrap-reboot.min";
 @import "libs/tiny-slider";
+@import "libs/fonts-icons";
 @import "libs/fonts";
-@import "Basse/mixins";
-@import "Basse/variables";
 @import "Blocks/header";
 @import "Blocks/title";
-
+@import "Blocks/hrs";
+@import "Blocks/buttons";
+@import "Blocks/about";
 * {
     font-family: Oswald;
     padding: 0;
@@ -18,6 +22,12 @@ body {
 }
 
 .container {
+    position: relative;
     width: 1140px;
     margin: 0 auto;
+    height: 100%;
+    &_pt150 {
+        padding-top: 150px;
+        padding-left: 8px;
+    }
 }

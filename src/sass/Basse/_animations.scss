@@ -1,0 +1,41 @@
+@keyframes VertPt150 {
+    from {
+        height: 0%;
+    }
+    
+    to {
+        height: calc(100% - 155px);
+    }
+}
+
+@keyframes HorPt150 {
+    from {
+        width: 0%;
+    }
+    
+    to {
+        width: calc(100% - 640px);
+    }
+}
+
+@keyframes head {
+    from {
+        width: 0%;
+    }
+    
+    to {
+        width: 40%;
+    }
+}
+@keyframes social {
+    from {
+        right: -200px;
+    }
+    70% {
+        right: -70px;
+    }
+    to {
+        right: -113px;
+    }
+}
+

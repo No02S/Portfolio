@@ -1,9 +1,96 @@
-
 .header {
-    padding-top: 150px;
     position: relative;
-    height: 600px;
+    height: 100vh;
     background: url('../img/BackFirst.png') center (center/cover) no-repeat;
-    
+    overflow: hidden;
+    &__social-panel {
+        position: fixed;
+        display: flex;
+        transform: rotate(-90deg);
+        min-width: 350px;
+        justify-content: space-between;
+        height: 26px;
+        bottom: 40%;
+        right: -200px;
+        color: $white;
+        font-size: 25px;       
+        animation: social 1s 2s ease-in-out forwards;
+        &__text {
+            text-transform: uppercase;
+            font-size: 18px;
 
+        }
+        hr {
+            margin: auto 0;           
+            opacity: 1;
+            background-color: $white;
+            width: 50px;
+            height: 1px;
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+            transform: rotate(90deg);
+            transition: 0.3s all;
+            &:hover {
+                transform: scale(1.5) rotate(90deg);
+            }
+            &:active {
+                transition: 0s all;
+                color: $main-color;
+            }
+        }  
+    }
+
+    &__background {
+        height: 100%;
+        width: 60%;
+        background-color:rgba(23, 23, 23, 0.7);
+        .container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__menu {
+        width: 275px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 70px 0px 0px 100px;
+        
+        a {
+            text-decoration: none;
+            color: $white;
+            @include circle30;
+        }
+    }
+    &__hamb {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 50px;
+        right: 50px;
+        width: 30px;
+        height: 17px;
+        hr {
+            margin: 0px;
+            opacity: 1;
+            width: 30px;
+            height: 2px;
+            background-color: $white;
+            
+        }
+        .hr2 {
+            width: 20px;
+            align-self: end;
+        }
+    }
+}
+
+.porono {
+    width: 100%;
+    height: 600px;
 }
