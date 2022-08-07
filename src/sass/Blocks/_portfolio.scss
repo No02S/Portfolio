@@ -18,29 +18,65 @@
         border: none;
         background: none;
         top: 50%;
-        transition: 0.2s all;
-    }
-    .Prev {
-        transform: translateY(-50%) scale(-1, 1);
-        left: 20%;
         &:hover {
-            transform: translateY(-50%) scale(-1, 1) scale(1.5);
+            .upR { 
+                width: 15px;
+                transform: rotate(-30deg) translate(-3.6px, 2px);
+            }
+            .downR {
+                width: 15px;
+                transform: rotate(30deg) translate(-3.6px, -2px);
+            }
+            .upL { 
+                width: 15px;
+                transform: rotate(30deg) translate(15.8px, -5px);
+            }
+            .downL {
+                width: 15px;
+                transform: rotate(-30deg) translate(15.8px, 5px);
+            }
+            .left {
+                animation: AOpacity 0.3s forwards;
+                transform: rotate(90deg) translate(-14px,100px);
+                width: 30px;
+            }
+            .right {
+                animation: AOpacity 0.3s forwards;
+                transform: rotate(90deg) translate(-14px,-100px);
+                width: 30px;
+            }
         }
         &:active {
-            transform: translateY(-50%) scale(-1, 1) scale(1);
-            animation: ArrowPrev 1s 0.2s;
+            hr {
+                background-color: $white;  
+            }
         }
+        hr {
+            transition: 0.2s all;
+            background-color: $main-color;
+            height: 2px;
+            width: 30px;
+            margin:5px 0px;
+            opacity: 1;   
+        }
+        .left {
+            transform: rotate(90deg) translate(-14px,14px);
+            margin: 0;
+            width: 14px;
+        }
+        .right {
+            transform: rotate(90deg) translate(-14px,-29px);
+            margin: 0;
+            width: 14px;
+        }
+    }
+    .Prev {
+        transform: translateY(-50%);
+        left: 21%;
     }
     .Next {
         transform: translateY(-50%);
-        right: 20%;
-        &:hover {
-            transform: translateY(-50%) scale(1.5);
-        }
-        &:active {
-            transform: translateY(-50%) scale(1);
-            animation: ArrowNext 1s 0.2s;
-        }
+        right: 21%;
     }
 }
 

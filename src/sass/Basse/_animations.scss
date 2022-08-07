@@ -90,26 +90,12 @@
 
 //ARROW SLIDER 
 
-@keyframes ArrowPrev {
+@keyframes AOpacity {
     from {  
-        left: 20%;
         opacity: 1;
     }
 
     to {
-        left: 0%;
         opacity: 0;
-
-    }
-}
-@keyframes ArrowNext {
-    from {
-        opacity: 1;
-        right: 20%;
-    }
-
-    to {
-        opacity: 0; 
-        right: 0%;
     }
 }
