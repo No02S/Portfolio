@@ -1,3 +1,4 @@
+//LAYER1 LINES
 @keyframes VertPt150 {
     from {
         height: 0%;
@@ -29,13 +30,86 @@
 }
 @keyframes social {
     from {
-        right: -200px;
+        right: -250px;
     }
     70% {
         right: -70px;
     }
     to {
-        right: -113px;
+        right: -133px;
     }
 }
 
+//LAYER2 LINES
+
+@keyframes VertAbout{
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: calc(28% - 190px);
+    }
+}
+@keyframes VertUnTitle {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 16px;
+    }
+}
+@keyframes VertAboutRight {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: calc(100% - 119px);
+    }
+}
+@keyframes HorAbout{
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: calc(100% - 52px);
+    }
+}
+@keyframes HorAbout {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: calc(100% - 52px);
+    }
+}
+
+//ARROW SLIDER 
+
+@keyframes ArrowPrev {
+    from {  
+        left: 20%;
+        opacity: 1;
+    }
+
+    to {
+        left: 0%;
+        opacity: 0;
+
+    }
+}
+@keyframes ArrowNext {
+    from {
+        opacity: 1;
+        right: 20%;
+    }
+
+    to {
+        opacity: 0; 
+        right: 0%;
+    }
+}

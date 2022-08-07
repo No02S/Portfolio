@@ -1,7 +1,6 @@
 .title {
     position: relative;
-    width: 500px;
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 300;
     line-height: 56px;
     color: $white;
@@ -9,6 +8,13 @@
     &__title {
         @include circle50;
     }
+    &__center {
+        @include circle50-2;
+        .secondStroke {
+            display: inline;
+            padding-left: 224px;
+        }
+    }   
     &_name {
         padding-left: 86px;
     }
@@ -22,9 +28,28 @@
         text-transform: uppercase;
         @include circle30;
     }
-    
     &__subtitle {
-        
+        font-size: 36px;
+        font-weight: 300;
+        @include circle40;
+        img {
+            margin-left: 15px;
+        }
+        .svg { 
+            width: 32px;
+            height: 32px;
+        }
+        &_bold {
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-left: 2px;
+        }
+
+    }
+    &__head {
+        font-size: 20px;
+        font-weight: 300;
+        @include circle20;
     }
     
 }

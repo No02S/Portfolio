@@ -1,0 +1,38 @@
+.about {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 100px;
+    &__bio {
+        text-align: left;
+        margin: 50px;
+        padding: 0 30px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 50px;
+        color: $white;
+    }
+    &__grid {
+        width: 100%;
+        margin-top: 70px;
+        padding: 0px 20px 0px 80px;
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        row-gap:140px;
+        text-align: left;
+    }
+    &__item {
+        padding-left: 9px;
+    }
+    &__item-descr {
+        position: relative;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 30px;
+        color: $white;
+        margin-left: 12px;
+        margin-top: -7px;
+        padding: 18px 45px 20px 20px;
+        border-left: 1px solid $main-color;
+        
+    }
+}

@@ -11,6 +11,9 @@
 @import "Blocks/hrs";
 @import "Blocks/buttons";
 @import "Blocks/about";
+@import "Blocks/skills";
+@import "Blocks/portfolio";
+
 * {
     font-family: Oswald;
     padding: 0;
@@ -26,8 +29,11 @@ body {
     width: 1140px;
     margin: 0 auto;
     height: 100%;
+    padding:0px 8px;
     &_pt150 {
         padding-top: 150px;
-        padding-left: 8px;
+    }
+    &_pt100 {
+        padding-top: 100px;
     }
 }

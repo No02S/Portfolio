@@ -1,9 +1,25 @@
+//BEFORE CIRCLES
+
 @mixin circle50 {
     &:before {
         content: '';
         position: absolute;
-        left: -9.5px;
-        top: 3px;
+        left: -7.5px;
+        top: 2.5px;
+        height: 50px;
+        width: 50px;
+        background-color: $main-color;
+        border-radius: 100%;
+        z-index: -1;
+    }
+    
+}
+@mixin circle50-2 {
+    &:before {
+        content: '';
+        position: absolute;
+        left: -12px;
+        top: 11.5px;
         height: 50px;
         width: 50px;
         background-color: $main-color;
@@ -13,7 +29,17 @@
     
 }
 @mixin circle40 {
-
+    &:before {
+        content: '';
+        position: absolute;
+        left: -7px;
+        top: 9px;
+        height: 40px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+        z-index: -1;
+    }
     
 }
 @mixin circle30 {
@@ -27,6 +53,18 @@
         background-color: $main-color;
         border-radius: 100%;
         z-index: -1;
+    } 
+}
+@mixin circle20 {
+    &:before {
+        content: '';
+        position: absolute;
+        left: -6px;
+        top: 6px;
+        height: 20px;
+        width: 20px;
+        background-color: $main-color;
+        border-radius: 100%;
+        z-index: -1;
     }
-    
 }

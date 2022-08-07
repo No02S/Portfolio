@@ -1,0 +1,46 @@
+.portfolio {
+    min-height: 100vh;
+    text-align: center;
+    .wrapper-slider {
+        margin-top: 100px;
+        position: relative;
+    }
+    .slider {
+        border: 1px solid $main-color;
+        img {
+            width: 700px;
+            height: 500px;  
+            
+        }
+    }
+    button {
+        position: absolute;
+        border: none;
+        background: none;
+        top: 50%;
+        transition: 0.2s all;
+    }
+    .Prev {
+        transform: translateY(-50%) scale(-1, 1);
+        left: 20%;
+        &:hover {
+            transform: translateY(-50%) scale(-1, 1) scale(1.5);
+        }
+        &:active {
+            transform: translateY(-50%) scale(-1, 1) scale(1);
+            animation: ArrowPrev 1s 0.2s;
+        }
+    }
+    .Next {
+        transform: translateY(-50%);
+        right: 20%;
+        &:hover {
+            transform: translateY(-50%) scale(1.5);
+        }
+        &:active {
+            transform: translateY(-50%) scale(1);
+            animation: ArrowNext 1s 0.2s;
+        }
+    }
+}
+

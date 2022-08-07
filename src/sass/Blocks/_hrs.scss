@@ -10,16 +10,40 @@
         &_pt150 {
             animation: VertPt150 2s ease forwards;
             margin-top: 5px;
-            left: 23px;
-            // height: calc(100% - 155px);
-            
+            left: 24px;
+            // height: calc(100% - 155px); 
         }   
         &_menu {
             left: 6.5px;
             top: 40px;
             z-index: -1;
-        }    
+        }
+        &_about {
+            top: 0px;
+            left: 24px;
+            // height: calc(28% - 190px);
+            animation: VertAbout 2s 1.91s ease-in forwards;
+            
+        }   
+        &_about-right {
+            top: 219px;     
+            right: 27px;     
+            // height: calc(100% - 169px);
+            animation: VertAboutRight 10s 5.9s ease-out forwards;
+        } 
+        &_about-undertitle {
+            bottom: -6px;
+            left: calc(50% - 58px);
+            // height: 16px;
+            animation: VertUnTitle 1s 5.1s ease forwards;
+        } 
+        &_layers {
+            top: 62px;
+            left: 13px;
+            height: 110px;
+        }
     }
+    
     &__horizontal {   
         height: 1px;
         width: 0%;
@@ -27,14 +51,14 @@
         &_head {
             height: 1px;
             animation: head 2s 0.5s ease forwards;
-            top: 57.8px;
+            top: 58.5px;
             right: 81px;
             // width: 40%;
         }      
         &_pt150 {
             animation: HorPt150 2s 0.5s ease forwards;
             // width: calc(100% - 640px);
-            margin-left: 16px;
+            left: 24px;
             top: 275px;
         }
         &_menu {
@@ -42,6 +66,21 @@
             top: 53px;
             z-index: -1;
         }  
+        &_about {
+            top: 219px;
+            left: 24px;
+            // width: calc(100% - 52px);
+            animation: HorAbout 2s 3.9s ease-in forwards;
+        } 
+        &_title {
+            top: 16px;
+            left: -21px;
+            width: 16px;
+        }
+        &_layers {
+            top: 127px;
+            left: 13px;
+            width: 120%;
+        }
     }
-    
 }
