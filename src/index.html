@@ -8,6 +8,21 @@
     <title>Portfolio</title>
 </head>
 <body>
+    <section class="navigation">
+        <div class="menu">
+            <div class="menu__close"><hr class="left"><hr class="right"></div>
+            <nav>
+                <ul class="menu__items-list">
+                    <li class="menu__stroke"><a href="#"><span>Обо мне</span></a></li>
+                    <li class="menu__stroke"><a href="#"><span>Мои навыки</span></a></li>
+                    <li class="menu__stroke"><a class="pb10" href="#"><span>Портфолио</span></a></li>
+                    <li class="menu__stroke"><a href="#"><span>Связь</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navigation__blackout"></div>
+    </section>
+
     <section class="header">  
         <hr class="hrs hrs__horizontal hrs__horizontal_head">
         <div class="header__social-panel">
@@ -32,14 +47,14 @@
                         </a>                   
                     </div>
                     <div class="title title__menu">
-                        <a class="button-text" href="#">
+                        <a class="button-text" href="#portfolio">
                             ПОРТФОЛИО
                             <hr class="hrs hrs__horizontal hrs__horizontal_menu"> 
                             <hr class="hrs hrs__vertical hrs__vertical_menu"> 
                         </a>
                     </div>       
                     <div class="title title__menu">
-                        <a class="button-text" href="#">
+                        <a class="button-text" href="#contacts">
                             СВЯЗАТЬСЯ СО МНОЙ
                             <hr class="hrs hrs__horizontal hrs__horizontal_menu"> 
                             <hr class="hrs hrs__vertical hrs__vertical_menu"> 
@@ -180,7 +195,8 @@
             
         </div>
     </section>
-    <section class="portfolio">
+
+    <section id="portfolio" class="portfolio">
         <div class="container container_pt100">
             <span class="title title__center">
                 Портфолио.<br>
@@ -207,13 +223,37 @@
                     <hr class="downL"> 
                     <hr class="right">
                 </button>
-            </div>
-            
+            </div>           
         </div>
     </section>
-    
+
+    <section id="contacts" class="contacts">
+        <div class="container container_pt100">
+            <span class="title title__center">
+                Мои контакты<br>
+                <p class="secondStroke secondStroke_pl300">и как со мной связаться</p> 
+                <hr class="hrs hrs__vertical hrs__vertical_layers">
+                <hr class="hrs hrs__horizontal hrs__horizontal_layers">
+            </span>
+            <div class="title title__subtitle title__subtitle_contacts">
+                Заполните форму и я свяжусь с вами:
+                <hr class="hrs hrs__vertical hrs__vertical_subtitle">
+                <hr class="hrs hrs__horizontal hrs__horizontal_subtitle">
+            </div>
+            <form action="#" method="get">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон" type="text">
+                <input name="message" placeholder="Сообщение" type="text">
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
     <script src="JS/tiny-slider.js"></script>
     <script src="Js/Script.js"></script>
-    
 </body>
 </html>

@@ -2,11 +2,12 @@
     min-height: 100vh;
     text-align: center;
     .wrapper-slider {
-        margin-top: 100px;
+        margin-top: 130px;
         position: relative;
     }
     .slider {
-        border: 1px solid $main-color;
+        border-top: 1px solid $main-color;
+        border-bottom: 1px solid $main-color;
         img {
             width: 700px;
             height: 500px;  

@@ -87,7 +87,17 @@
         width: calc(100% - 52px);
     }
 }
-
+//Hamburger
+@keyframes Hlines {
+    from {
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
 //ARROW SLIDER 
 
 @keyframes AOpacity {

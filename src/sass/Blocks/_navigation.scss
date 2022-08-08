@@ -1,0 +1,116 @@
+.navigation {
+    &__blackout {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(23, 23, 23, 0.8);
+        z-index: 9;
+        transition: 0.7s all;
+        visibility: hidden;
+        opacity: 0;
+        &.active {
+            opacity: 1;
+            visibility:visible;
+        }
+    }
+    .menu {
+        background-color: $main-color;
+        width: 600px;
+        height: 100vh;
+        left: -100%;
+        position: fixed;
+        z-index: 10;
+        transition: 0.5s all;
+        &.active {
+            left: 0%;
+        }
+        &__close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            width: 23px;
+            height: 23px;
+            cursor: pointer;
+            &:hover {              
+                .left {
+                    transform: rotate(45deg) scale(1.5);
+                }
+                .right {
+                    transform: rotate(-45deg) scale(1.5);
+                }
+            }
+            &:active {
+                .left {
+                    background-color: $back-color;
+                    transition: 0s all;
+                    transform: rotate(45deg) scale(1);
+                }
+                .right {
+                    background-color: $back-color;
+                    transition: 0s all;
+                    transform: rotate(-45deg) scale(1);
+                }
+            }
+            hr {
+                position: absolute;
+                background-color: $white;
+                margin: 0px;
+                opacity: 1;
+                width: 2px;
+                height: 30px;
+                top: -4px;
+                left: 10px;
+                transition: 0.1s all;
+            }
+            .left {
+                transform: rotate(45deg);
+            }
+            .right {
+                transform: rotate(-45deg);
+            }
+        }
+        nav {
+            margin-top: 25vh;
+        }
+        &__items-list {
+            display: flex;
+            flex-direction: column;
+            height: 55vh;
+            justify-content: space-between;
+            padding-left: 0px;
+            list-style-type: none;
+            padding-left: 50px;
+            .pb10 {
+                padding-bottom: 10px;
+            }
+            a {
+                text-decoration: none;
+                color: $white;
+                font-size: 48px;
+                font-weight: 200;
+                text-transform: uppercase;
+                padding-right: 40px;
+                border-bottom: 1px solid $white;
+                transition: 2s all;
+                span {
+                    display: inline-block;
+                    transition: 0.2s all;
+                }
+                &:hover {
+                    transition: 0.2s all;
+                    padding-right: 200px;
+                    span {
+                        transition: 0.2s all;
+                        transform: scale(1.3);
+                    }
+                }
+                &:active { 
+                    span {
+                        transition: 0s all;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}

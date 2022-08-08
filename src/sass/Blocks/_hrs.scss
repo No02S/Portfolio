@@ -38,9 +38,14 @@
             animation: VertUnTitle 1s 5.1s ease forwards;
         } 
         &_layers {
-            top: 62px;
+            top: 60px;
             left: 13px;
             height: 110px;
+        }
+        &_subtitle {
+            top: 45px;
+            left: 12px;
+            height: 55px;
         }
     }
     
@@ -51,8 +56,8 @@
         &_head {
             height: 1px;
             animation: head 2s 0.5s ease forwards;
-            top: 58.5px;
-            right: 81px;
+            top: 58px;
+            right: 80px;
             // width: 40%;
         }      
         &_pt150 {
@@ -81,6 +86,11 @@
             top: 127px;
             left: 13px;
             width: 120%;
+        }
+        &_subtitle {
+            top: 61px;
+            left: 13px;
+            width: 50%;
         }
     }
 }
