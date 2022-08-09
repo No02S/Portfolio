@@ -13,10 +13,10 @@
             <div class="menu__close"><hr class="left"><hr class="right"></div>
             <nav>
                 <ul class="menu__items-list">
-                    <li class="menu__stroke"><a href="#"><span>Обо мне</span></a></li>
-                    <li class="menu__stroke"><a href="#"><span>Мои навыки</span></a></li>
-                    <li class="menu__stroke"><a class="pb10" href="#"><span>Портфолио</span></a></li>
-                    <li class="menu__stroke"><a href="#"><span>Связь</span></a></li>
+                    <li class="menu__stroke"><a class="menu__ref" href="#about"><span>Обо мне</span></a></li>
+                    <li class="menu__stroke"><a class="menu__ref" href="#skills"><span>Мои навыки</span></a></li>
+                    <li class="menu__stroke"><a class="menu__ref pb10" href="#portfolio"><span>Портфолио</span></a></li>
+                    <li class="menu__stroke"><a class="menu__ref" href="#contacts"><span>Связь</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -121,7 +121,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
         <div class="container container_pt100">
             <span class="title title__center">
                 Навыки и какие технологии
@@ -228,6 +228,12 @@
     </section>
 
     <section id="contacts" class="contacts">
+        <div id="thanks" class="contacts__thanks">   
+            <div class="contacts__thanks-text">
+                <div class="contacts__thanks-close"><hr class="left"><hr class="right"></div>
+                Спасибо за обращение!
+            </div> 
+        </div>
         <div class="container container_pt100">
             <span class="title title__center">
                 Мои контакты<br>
@@ -240,19 +246,26 @@
                 <hr class="hrs hrs__vertical hrs__vertical_subtitle">
                 <hr class="hrs hrs__horizontal hrs__horizontal_subtitle">
             </div>
-            <form action="#" method="get">
-                <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="text">
-                <input name="message" placeholder="Сообщение" type="text">
+            <form class="contacts__form" action="#" method="get">
+                <div class="contacts__form-input contacts__form-input_start">
+                    <input required id="name" name="name" type="text">
+                    <label for="name">Ваше имя</label>
+                </div>
+
+                <div class="contacts__form-input contacts__form-input_end">
+                    <input required id="email" name="email" type="email">
+                    <label for="email">Ваша почта</label>
+                </div>
+
+                <div class="contacts__form-message">
+                    <textarea required name="text" id="text"></textarea>
+                    <label for="text">Ваше сообщение</label>
+                </div>             
+                <button class="contacts__form-btn">отправить</button>
             </form>
         </div>
     </section>
-
-
-
-
-
-
+    <script src="JS/jquery-3.6.0.min.js"></script>
     <script src="JS/tiny-slider.js"></script>
     <script src="Js/Script.js"></script>
 </body>

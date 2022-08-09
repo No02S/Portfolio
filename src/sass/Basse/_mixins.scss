@@ -68,3 +68,48 @@
         z-index: -1;
     }
 }
+@mixin close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    &:hover {              
+        .left {
+            transform: rotate(45deg) scale(1.5);
+        }
+        .right {
+            transform: rotate(-45deg) scale(1.5);
+        }
+    }
+    &:active {
+        .left {
+            background-color: $back-color;
+            transition: 0s all;
+            transform: rotate(45deg) scale(1);
+        }
+        .right {
+            background-color: $back-color;
+            transition: 0s all;
+            transform: rotate(-45deg) scale(1);
+        }
+    }
+    hr {
+        position: absolute;
+        background-color: $white;
+        margin: 0px;
+        opacity: 1;
+        width: 2px;
+        height: 30px;
+        top: -4px;
+        left: 10px;
+        transition: 0.1s all;
+    }
+    .left {
+        transform: rotate(45deg);
+    }
+    .right {
+        transform: rotate(-45deg);
+    }
+}
