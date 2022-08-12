@@ -8,8 +8,8 @@
         height: 0%;
         transition: 0.5s all;
         &_pt150 {
-            animation: VertPt150 2s ease forwards;
-            margin-top: 5px;
+            animation: VertPt150 2.9s ease forwards;
+            top: 195px;
             left: 24px;
             // height: calc(100% - 155px); 
         }   
@@ -33,7 +33,7 @@
         } 
         &_about-undertitle {
             bottom: -6px;
-            left: calc(50% - 58px);
+            left: calc(50% - 77px);
             // height: 16px;
             animation: VertUnTitle 1s 5.1s ease forwards;
         } 
@@ -42,10 +42,20 @@
             left: 13px;
             height: 110px;
         }
+        &_contacts {
+            top: 60px;
+            left: 13px;
+            height: 40px;
+        }
         &_subtitle {
             top: 45px;
             left: 12px;
-            height: 55px;
+            height: 350px;
+        }
+        &_subtitle-foot {
+            top: 45px;
+            left: 12px;
+            height: 16px;
         }
     }
     
@@ -85,12 +95,188 @@
         &_layers {
             top: 127px;
             left: 13px;
-            width: 120%;
+            width: 100%;
         }
-        &_subtitle {
+        &_contacts {
+            top: 73px;
+            left: 13px;
+            width: 250px;
+        }
+        &_subtitle-form {
             top: 61px;
             left: 13px;
-            width: 60%;
+            width: 600px;
+        }
+        &_subtitle-foot {
+            top: 61px;
+            left: 13px;
+            width: 100%;
+        }
+    }
+}
+@media (max-width:1270px) {
+    .hrs {
+        &__horizontal {   
+            &_head {
+                right: 41px;
+                animation: head-1270 2s 0.5s ease forwards;          
+            }
+        }
+    }
+    
+}
+@media (max-width:1220px) {
+    .hrs{
+        &__horizontal {
+            &_subtitle-foot {
+                top: 61px;
+                left: 25px;
+                width: 95%;
+            }
+        }
+        
+    }
+}
+@media (max-width:1186px) {
+    .hrs {
+        &__vertical {
+            &_about-right {
+                right: 50px;
+            }
+        }
+        &__horizontal {   
+            &_about {
+                animation: HorAbout-1186 2s 3.9s ease-in forwards;
+            }
+        }
+    }
+}
+@media (max-width:1140px) {
+    .hrs {
+        &__horizontal {   
+            &_pt150 {
+                animation: HorPt150-w1140 2s 0.5s ease forwards;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .hrs {
+        &__horizontal {   
+            &_pt150 {
+                animation: HorPt150-w768 2s 0.5s ease forwards;
+            }
+            &_about {
+                top: 168px;
+            }
+            &_layers {
+                top: 98px;
+                left: 10px;
+            }
+            &_subtitle-foot {
+                left: 20px;
+            }
+        }
+        
+        &__vertical {
+            &_about-right {
+                top: 168px;
+                animation: VertAboutRight-768 10s 5.9s ease-out forwards;
+            }
+            &_about {
+                animation: VertAbout-768 2s 1.91s ease-in forwards;
+                
+            }   
+            &_about-undertitle {
+                bottom: -23px;
+                left: calc(50% - 65px);
+                animation: VertUnTitle-768 1s 5.1s ease forwards;
+            }
+            &_layers {
+                top: 50px;
+                left: 10px;
+                height: 85px;
+            }
+        }
+    }
+}
+@media (max-width: 630px) {
+    .hrs {
+        &__vertical {
+            &_contacts {
+                height: 32px;
+                top: 52px;
+            }
+        }
+        &__horizontal {
+            &_contacts {
+                top: 60px;
+                width: 215px;
+            }
+            &_subtitle-form {
+                    width: 95%;
+            }
+        }
+    } 
+}
+@media (max-width:600px) {
+    .hrs {
+        &__vertical {
+            &_about-right {
+                right: 16px; 
+            }
+            &_about-undertitle {
+                left: calc(50% - 45px);
+            }
+        }
+        &__horizontal {   
+            &_about {
+                animation: HorAbout-600 2s 3.9s ease-in forwards;
+            }
+            &_subtitle-foot {
+                left: 12px;
+            }
+        }
+    }
+}
+@media (max-width:460px) {
+    .hrs {
+        &__horizontal{
+            &_title {
+            top: 16px;
+            left: -30px;
+            width: 27px;
+            }
+        }
+        &__vertical{
+            &_subtitle-foot {
+                top: 41px;
+                left: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width:430px) {
+    .hrs {
+        &__horizontal {   
+            &_pt150 {
+                top: 265px;
+                animation: HorPt150-w430 2s 0.5s ease forwards;
+            }
+            &_subtitle-form {
+                top: 50px;
+            }
+        }
+    }
+}
+@media (max-width:363px) {
+    .hrs {
+        &__horizontal {   
+            &_subtitle-form {
+                top: 70px;
+            }
         }
     }
 }

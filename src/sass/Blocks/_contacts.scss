@@ -4,6 +4,43 @@
     text-align: center;
     background: url('../img/BackLast.png') center (center/cover) no-repeat;
     overflow: hidden;
+    &__footer {
+        position: relative;
+        margin-top: 115px;
+        .title {
+            text-align: center;
+        }
+    }
+    &__social {
+        display: flex;
+        height: 45px;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 60%;
+        justify-content: space-between;
+        font-size: 45px;
+        hr {
+            margin-top: 21.5px;
+            opacity: 1;
+            width: 35%;
+            background-color: $white;
+            height: 1px;
+        }
+        a {
+            text-decoration: none;
+            color: $white;
+            transition: 0.3s all;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.3);
+            }
+            &:active {
+                transform: scale(1);
+                transition: 0s all;
+                color: $main-color;
+            }
+        }
+    }
     &__thanks {
         display: none;
         top: 0px;
@@ -89,7 +126,7 @@
                 left: 5%;
             }  
         }
-        input {
+        .NameEmail {
             margin-top: 11px;
             border: 1px solid $main-color;
             background: none;
@@ -142,8 +179,162 @@
                 transition: 0s all;
                 transform: translate(0px, 0px);
                 box-shadow: 0px 0px 0px;
-                // color: $main-color;
-                // background-color: $white;
+            }
+        }
+        &-policy {
+            grid-column: 1 / 3;
+            font-size: 16px;
+            font-weight: 300;
+            color: $white;
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .contacts {
+        &__social {
+            width: 460px;
+            hr {
+                width: 140px;
+            }
+            a {
+                &:hover {
+                    transform: scale(1);
+                }
+                &:active {
+                    transform: scale(1.3);
+                    transition: 0s all;
+                    color: $main-color;
+                }
+            }
+        }
+        &__form {
+            &-btn {
+                transition: 0.7s 0.1s all;
+                &:hover {
+                    transform: translate(0px, 0px);
+                    box-shadow: 0px 0px 0px $main-color;
+                }
+                &:active {
+                    transition: 0s all;
+                    transform: translate(-5px, -5px);
+                    box-shadow: 5px 5px 0px $white;
+                }
+            }
+        }
+    }
+}
+@media (max-width:768px) {
+    .contacts {
+        position: relative;
+        &__footer {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+        }
+    }
+}
+@media (max-width:630px) {
+    .contacts {
+        &__social {
+            font-size: 40px;
+            width: 380px;
+            hr {
+                width: 30%;
+            }
+        }
+        &__form {
+            width: 89.5%;
+            column-gap: 30px;
+            .NameEmail {
+                width: 100%;
+                padding: 0 50px;
+                
+            }
+            textarea {    
+                width: 100%;
+            }
+            
+            &-btn {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .contacts {
+        &__social {
+            font-size: 40px;
+            width: 380px;
+            hr {
+                width: 30%;
+            }
+        }
+        &__form {
+            &-btn {
+                height: 60px;
+                font-size: 22px;
+            }
+        }
+    }
+}
+@media (max-width:480px) {
+    .contacts {
+       height: 890px;
+    }
+}
+@media (max-width:450px) {
+    .contacts {
+        &__form {
+            margin-top: 20px;
+            .NameEmail {
+                height: 60px;
+            }
+            textarea {    
+                height: 120px;
+            }
+            &-btn {
+                width: 200px;
+            }
+
+        }
+    }
+}
+@media (max-width:420px) {
+    .contacts {
+        &__thanks {
+           &-text {
+                width: 90%;
+           } 
+        }
+    }
+}
+
+@media (max-width:390px) {
+    .contacts {
+        height: 810px;
+        &__form {
+            column-gap:15px;
+            .NameEmail {
+                height: 50px;
+            }
+            textarea {    
+                height: 120px;
+            }
+            &-btn {
+                height: 50px;
+            }
+
+        }
+    }
+}
+@media (max-width:400px) {
+    .contacts {
+        &__social {
+            width: 308px;
+            hr {
+                width: 26%;
             }
         }
     }

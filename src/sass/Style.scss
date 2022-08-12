@@ -9,7 +9,6 @@
 @import "Blocks/header";
 @import "Blocks/title";
 @import "Blocks/hrs";
-@import "Blocks/buttons";
 @import "Blocks/about";
 @import "Blocks/skills";
 @import "Blocks/portfolio";
@@ -28,10 +27,14 @@ body {
 
 .container {
     position: relative;
-    width: 1140px;
+    max-width: 1140px;
+    min-width: 1140px;
     margin: 0 auto;
-    height: 100%;
     padding:0px 8px;
+    &_C-head {
+        padding-top: 150px;
+        height: 100%;
+    }
     &_pt150 {
         padding-top: 150px;
     }
@@ -39,3 +42,29 @@ body {
         padding-top: 100px;
     }
 }
+
+@media (max-width:1140px) {
+    .container {
+        max-width: 1140px;
+        min-width: 320px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        &_pt150 {
+            padding-top: 100px;
+        }
+        &_pt100 {
+
+        }
+    }
+}
+@media (max-width:480px) {
+    .container {
+        &.pt50-480 {
+            padding-top: 50px;
+        }
+    }
+}
+
