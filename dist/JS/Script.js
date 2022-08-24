@@ -1,3 +1,4 @@
+'use strict';
 const slider = tns({
     container: '.slider',
     items: 1,
@@ -15,6 +16,11 @@ const hamburger = document.querySelector('.header__hamb'),
         blackout = document.querySelector('.navigation__blackout'),
         closee = document.querySelector('.menu__close'),
         menufer = document.querySelectorAll('.menu__ref');
+
+
+window.onload = function () {
+    document.body.classList.add('loaded');
+}
 
 hamburger.addEventListener('click', function() {
     menu.classList.add('active');
@@ -71,6 +77,8 @@ $(document).ready(function() {
                     $('.skills__item-descr').eq(i).addClass('skills-active2');
                     $('.skills-second').eq(i).delay(600).fadeIn('slow');
                     $('.skills-first').eq(i).fadeOut('slow'); 
+                    $('.firstlink').eq(i).fadeOut('slow');
+                    $('.secondlink').eq(i).delay(600).fadeIn('slow'); 
                 } else if ($('.skills__item-descr').eq(i).hasClass('skills-active2')) {
                     $('.skills__blackout').removeClass('blackout-active');
                     $('.skills__item-descr').eq(i).removeClass('skills-active2');
@@ -78,9 +86,11 @@ $(document).ready(function() {
                     $('.skills__item-descr').eq(i).addClass('skills-active'); 
                     $('.skills-second').eq(i).fadeOut('slow');
                     $('.skills-first').eq(i).delay(600).fadeIn('slow'); 
+                    $('.firstlink').eq(i).delay(600).fadeIn('slow');
+                    $('.secondlink').eq(i).fadeOut('slow'); 
                 }
-            })
+            });
         });
-    };
+    }
     toggleSlide('.skills-more');
 });

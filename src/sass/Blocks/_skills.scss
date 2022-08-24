@@ -15,11 +15,6 @@
         justify-content: space-between;
         width: 80%;
         height: 50px;
-        // img {
-        //     height: 50px;
-        //     width: auto;
-        //     margin-bottom: 5px;
-        // }
         svg {
             //GULP GULP GULP GULP GULP GULP
             &.GULP {
@@ -84,9 +79,7 @@
                 // GIT GIT GIT GIT GIT
             }
         }
-        
     }
-    
     &__grid {
         width: 100%;
         margin-top: 120px;
@@ -144,7 +137,7 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: -25px;
-            img {
+            img, svg {
                 height: 70px;
                 width: auto;
                 transition: 0.3s all;
@@ -152,15 +145,20 @@
                     transform: scale(1.2);
                 }
             }
+            svg {
+                margin-left: -95px;
+                transform: scale(0.5);
+                &:hover {
+                    transform: scale(0.7);
+                }
+            }
         }
         
         &.skills-active {
             animation: skills-text 1s 0s;
-            #secondlink {
-                display: none;  
-            }
         }
-        #secondlink {
+        .secondlink {
+            display: none;
             font-size: 25px;
             color: $main-color;
             &:hover {
@@ -172,7 +170,7 @@
                 color: $main-color;
             }  
         }
-        #firstlink {
+        .firstlink {
             &:hover {
                 transition: 0.2s color;
                 color: $main-color;
@@ -186,15 +184,11 @@
             position: relative;
             animation: skills-text 1s 0s;
             z-index: 13;
-            #firstlink {
-                display: none;
-            }
-            span.skills-second {
+            .skills-second {
                 font-size: 25px;
-                
             }
         }
-        span.skills-second {
+        .skills-second {
             display: none;
         }
         .skills-more {
@@ -323,21 +317,46 @@
         }
         &__item-descr {
             .second-tools {
-                img {
-                    height: 70px;
-                    width: auto;
+                img, svg {
                     &:hover {
                         transform: scale(1);
                     }
                     &:active {
-                        transition: 0.1s all;
+                        transition: 0s all;
                         transform: scale(1.2);
+                    }
+                }
+                svg {
+                    &:hover {
+                        transform: scale(0.5);
                     }
                 }
             }
             &.skills-active2 {
-                span.skills-second {
+                .skills-second {
                     font-size: 22px;
+                }
+            }
+            .secondlink {
+                transition: 0.2s all;
+                &:hover {
+                    transition: 0s color;
+                    color: #cc4900
+                }
+                &:active {
+                    transition: 0s color;
+                    color: #e0e0e0
+                }
+            }
+            .firstlink {
+                transition: 0.2s color;
+                &:hover {
+                transition: 0s color;
+                color: #e0e0e0
+                }
+                &:active {
+                    transition: 0s color;
+                    color: #cc4900
                 }
             }
         }
@@ -405,33 +424,12 @@
                 .skills__item-content {
                     padding-top: 0px;
                     .pl20 {
-                        margin: -11px 0px -38px 0px;
+                        margin: 0 0 -13px 0;
                     }
                 }
             }
         }
         
-    }
-}
-
-@media (max-width:430px) {
-    .skills {
-        &__item-descr {
-            &.skills-active2 {
-                span.skills-second {
-                    .second-tools {
-                        // justify-content: start;
-                        img {
-                            // width: 121px;
-                        }
-                        a {
-                        }
-                        .tool-gulp {
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -440,6 +438,5 @@
         p.secondStroke {
             padding-left: 0px;
         }
-        
     }
 }

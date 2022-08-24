@@ -3,14 +3,21 @@
     font-size: 48px;
     font-weight: 300;
     line-height: 56px;
-    color: $white;
+    color: #e0e0e0;
     z-index: 2;
+    display: inline;
     &__title {
+        display: block;
         @include circle50;
     }
     &__center {
         @include circle50-2;
         padding-right: 40px;
+        h2 {
+            display: inline;
+            font-size: 48px;
+            font-weight: 300;
+        }
         .secondStroke {
             display: inline;
             padding-left: 130px;
@@ -49,9 +56,13 @@
             padding-left: 2px;
         }
         &_contacts, &_contacts-foot {
+            display: block;
             margin-top: 45px;
             padding-left: 5px;
             text-align: left;
+        }
+        &_contacts-foot {
+            display: inline;
         }
 
     }
@@ -77,6 +88,10 @@
         &__center {
             font-size: 38px; 
             line-height: 35px;
+            h2 {
+                font-size: 38px;
+                line-height: 35px;
+            }
             &:before {
                 left: -9px;
                 top: 10px;
@@ -86,6 +101,9 @@
             &_cont {
                 font-size: 48px;
                 @include circle50-2;
+                h2 {
+                    font-size: 48px;
+                }
             }
         }
     }
@@ -95,6 +113,9 @@
         &__center {
             &_cont {
                 font-size: 40px;
+                h2 {
+                    font-size: 40px;
+                }
                 @include circle40;
                 &:before {
                     top: 12px;
@@ -208,6 +229,9 @@
     .title {
         &.SKILll {
             font-size: 36px;
+            h2 {
+                font-size: 36px;
+            }
         }
     }
 }
@@ -228,6 +252,9 @@
     .title {
         &.SKILll {
             font-size: 32px;
+            h2 {
+                font-size: 32px
+            }
         }
     }
 }

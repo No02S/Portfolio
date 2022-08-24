@@ -1,0 +1,82 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $back-color;
+    z-index: 20;
+    
+    &__wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    &__hr {
+        position: absolute;
+        border-top: 1px inset $white;
+        border-bottom: 1px inset $white;
+        // background-color: $main-color;
+        opacity: 1;
+        // width: 30%;
+        height: 4px;
+        color: $back-color;
+        top: 50%;
+        margin: 0;
+        &_left-toCenter {
+            left: 0%;
+            animation: preloaderLeft-toCenter 2s cubic-bezier(0.1,0.25,0.25,0.1) infinite;
+        }
+        &_right-toCenter {
+            right: 0%;
+            animation: preloaderRight-toCenter 2s cubic-bezier(0.1,0.25,0.25,0.1) infinite;
+        }
+        &_circle {
+            left: 30%;
+        }
+    } 
+    #circle1 {
+        animation: preloaderHr-circle 2s 0.5s linear infinite;
+    }
+    #circle2 {
+        animation: preloaderHr-circle 2s 0.75s linear infinite;
+    }
+    #circle3 {
+        animation: preloaderHr-circle 2s 1s linear infinite;
+    }
+    #circle4 {
+        animation: preloaderHr-circle 2s 1.25s linear infinite;
+    }
+    #circle5 {
+        animation: preloaderHr-circle 2s 1.5s linear infinite;
+    }
+    #circle6 {
+        animation: preloaderHr-circle 2s 1.75s linear infinite;
+    }
+    &__loading {
+        position: absolute;
+        color: $white;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 120px;
+        font-weight: 300;
+        .dot1 {
+            animation: preloader-dots 0.8s infinite;
+        }
+        .dot2 {
+            animation: preloader-dots 0.8s 0.25s infinite;
+        }
+        .dot3 {
+            animation: preloader-dots 0.8s 0.5s infinite;
+        }
+    }
+}
+.loaded .preloader {
+    display: none;
+}
+
