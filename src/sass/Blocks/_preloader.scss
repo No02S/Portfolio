@@ -65,13 +65,17 @@
         transform: translateX(-50%);
         font-size: 120px;
         font-weight: 300;
+        
         .dot1 {
+            font-family:'Times New Roman', Times, serif;
             animation: preloader-dots 0.8s infinite;
         }
         .dot2 {
+            font-family:'Times New Roman', Times, serif;
             animation: preloader-dots 0.8s 0.25s infinite;
         }
         .dot3 {
+            font-family:'Times New Roman', Times, serif;
             animation: preloader-dots 0.8s 0.5s infinite;
         }
     }

@@ -1,242 +1,140 @@
 .portfolio {
     text-align: center;
     padding-bottom: 100px;
-    .wrapper-slider {
-        margin-top: 130px;
-        position: relative;
-        border-top: 1px solid $main-color;
-        border-bottom: 1px solid $main-color;
-        .slider {
-            img {
-                width: 90%;
-                height: auto;
-            }
-            .Port {
-                position: relative;
-                .slider__descr {
-                    display: block;
-                    bottom:0px;
-                    position: absolute;
-                    margin: 0 5%;
-                    background-color: rgba( #111111, $alpha: 0.8);
-                    width: 90%;
-                    height: 47%;
-                    color: $white;
-                    font-size: 20px;
-                    padding: 25px;
-                    text-align: left;
-                    p {
-                        font-size: 25px;
-                        text-transform: uppercase;
-                    }
+    &__grid {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        gap: 50px;
+        &-item-wrap {
+            position: relative;
+            &:hover {
+                .portfolio__grid-img {
+                    animation: Blur 0.5s forwards;
+                }
+                .portfolio__grid-item-wrap-descr {
+                    visibility: visible;
+                    opacity: 1;
                 }
             }
-            &__btn {
+            &-descr {
+                transition: 0.2s all;
+                opacity: 0;
+                visibility: hidden;
                 position: absolute;
-                border: none;
-                background: none;
+                padding:20px 20px 0px;
                 top: 50%;
-                &:hover {
-                    .upR { 
-                        width: 15px;
-                        transform: rotate(-30deg) translate(-3.6px, 2px);
-                    }
-                    .downR {
-                        width: 15px;
-                        transform: rotate(30deg) translate(-3.6px, -2px);
-                    }
-                    .upL { 
-                        width: 15px;
-                        transform: rotate(30deg) translate(15.8px, -5px);
-                    }
-                    .downL {
-                        width: 15px;
-                        transform: rotate(-30deg) translate(15.8px, 5px);
-                    }
-                }
-                &:active {
-                    hr {
-                        background-color: $white;  
-                    }
-                }
-                hr {
-                    transition: 0.2s all;
-                    background-color: $main-color;
-                    height: 2px;
-                    width: 30px;
-                    margin:5px 0px;
-                    opacity: 1;   
-                }
+                font-size: 22px;
+                font-weight: 300;
+                color: $white;
+                width:100%;
+                height: 50%;
+                text-transform: uppercase;
+                text-align: center;
+                background-color: rgba($color: $back-color, $alpha: 0.8);
+                z-index: 3;
             }
         }
-        .Prev {
-            transform: translateY(-50%);
-            left: 105px;
+        &-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: 0.2s all;
         }
-        .Next {
-            transform: translateY(-50%);
-            right: 105px;
-        }
-    }
-    
-}
-@media (max-width:1140px) {
-    .portfolio {
-        .wrapper-slider {
-            margin: 0 auto;
-            margin-top: 130px;
-        }
-    }
-}
-@media (max-width:970px) {
-    .portfolio {
-        padding-bottom: 100px;
-        .wrapper-slider {
-            .slider {
-                .Port {
-                    .slider__descr {
-                        margin: 0 4%;
-                        width: 92%;
-                    }
-                }
-                .tns-item {
-                    height: auto;
-                }
-                img {
-                    width: 92%;
-                    height: auto;
-                }
+        .Recursline {
+            position: absolute;
+            margin: 0;
+            top: 0px;
+            left: unset;
+            border: none;
+            background-color: $main-color;
+            opacity: 1;
+            box-shadow: 0px -1px 2px $main-color;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 20s;
+            z-index: 4;
+            &-1 {
+                // animation: Portfolioitem 20s ease-in-out infinite;
+                animation-name: Portfolioitem;
             }
-        }  
+            &-2 {
+                // animation: Portfolioitem 20s ease-in-out reverse infinite;
+                animation-name: Portfolioitem;
+                animation-direction:reverse;
+            }
+            &-3 {
+                // animation: PortfolioitemRevrs 20s ease-in-out infinite;
+                animation-name: PortfolioitemRevrs;
+            }
+            &-4 {
+                // animation: PortfolioitemRevrs 20s ease-in-out reverse infinite;
+                animation-name: PortfolioitemRevrs;
+                animation-direction:reverse;
+            }
+        }
+    }
+}
+@media (max-width:1220px) {
+    .portfolio {
+        &__grid {
+            padding: 0 3%;
+        }
     }
 }
 
-@media (max-width:795px) {
+@media (max-width:1140px) {
     .portfolio {
-        padding-bottom: 100px;
-        .wrapper-slider {
-            .tns-nav {
-                bottom: 5%;
-                left: 50%;
-                transform: translateX(-50%);
-                position: absolute;
-                z-index: 2; 
-                width:200px;
-                height: 10px;    
-                display: flex;   
-                justify-content: space-between;
-                [data-nav] {
-                    transition: 0.2s all;
-                    background-color: $white;
-                    margin: 0 5px;
-                    height: 1px;
-                    width: 30px;
-                    border: none;
-                }
-                .tns-nav-active {
-                    transition: 0.2s all;
-                    height: 5px;
-                    background-color: $main-color;
-                }
-            }
-            .Prev {
-                display: none;
-            }
-            .Next {
-                display: none;
-            }
-        }  
+        &__grid {
+            padding: 0 2%;
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .portfolio {
+        &__grid {
+            gap: 15px;
+        }
     }
     
 }
 
 @media (max-width:768px) {
     .portfolio {
-        .wrapper-slider {
-            margin-top: 100px;
-            .slider {
-                .Port {
-                    .slider__descr {
-                        font-size: 16px;
-                        p {
-                            font-size: 20px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-@media (max-width:670px) {
-    .portfolio {
-        .wrapper-slider {
-            .slider {
-                .Port {
-                    .slider__descr {
-                        padding: 10px;
-                    }
-                }
-            }
-        }
-        
-    }
-}
-@media (max-width:600px) {
-    .portfolio {
         padding-bottom: 50px;
-        .wrapper-slider {
-            margin-top: 75px;
-            .tns-nav {
-                width:140px;
-                bottom: 1%;
-                .tns-nav-active {
-                    height: 3px;
-                }
-            }
-            // .slider {
-            //     .Port {
-            //         .slider__descr {
-            //             font-size: 14px;
-            //             p {
-            //                 font-size: 17px;
-            //             }
-            //         }
-            //     }
-            // }
+        &__grid {
+            grid-template-columns: 1fr;
+            padding: 0 60px;
+            gap: 60px;
         }
     }
 }
-@media (max-width:580px) {
+
+@media (max-width:560px) {
     .portfolio {
-        .wrapper-slider {
-            .slider {
-                .Port {
-                    .slider__descr {
-                        font-size: 14px;
-                        p {
-                            font-size: 17px;
-                            margin-bottom: 5px;
-                        }
-                    }
+        &__grid {
+            margin-top: 70px;
+            padding: 0 40px;
+            gap: 30px;
+            &-item-wrap {
+                &-descr {
+                    font-size:17px;
                 }
             }
         }
     }
 }
-@media (max-width:470px) {
+@media (max-width:480px) {
     .portfolio {
-        .wrapper-slider {
-            .tns-nav {
-                bottom: 3px;
-            }
-            .slider {
-                .Port {
-                    .slider__descr {
-                        font-size: 13px;
-                        p {
-                            font-size: 15px;
-                        }
-                    }
+        &__grid {
+            padding: 0 10px;
+            &-item-wrap {
+                &-descr {
+                    padding-top: 10px;
+                    font-size:17px;
                 }
             }
         }
@@ -244,16 +142,11 @@
 }
 @media (max-width:400px) {
     .portfolio {
-        .wrapper-slider {
-            .slider {
-                .Port {
-                    .slider__descr {
-                        font-size: 11px;
-                        p {
-                            font-size: 13px;
-                            margin-bottom: 0px;
-                        }
-                    }
+        &__grid {
+            gap: 15px;
+            &-item-wrap {
+                &-descr {
+                    font-size:15px;
                 }
             }
         }
@@ -261,31 +154,12 @@
 }
 @media (max-width:380px) {
     .portfolio {
-        .wrapper-slider {
-            .tns-nav {
-                bottom: 1px;
-                [data-nav] {
-                    width: 23px;
-                }
-            }
-        }
+        
     }
 }
 @media (max-width:339px) {
     .portfolio {
-        .wrapper-slider {
-            
-            .slider {
-                .Port {
-                    .slider__descr {
-                        line-height: 15px;
-                        p {
-                            margin-bottom: 3px;
-                        }
-                    }
-                }
-            }
-        }
+        
     }
 }
 

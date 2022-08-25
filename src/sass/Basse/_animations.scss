@@ -1,3 +1,81 @@
+@keyframes preloader-dots {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes preloaderLeft-toCenter {
+    from {
+        width: 0%
+    }
+
+    25% {
+        width: 30%;
+        left: 0
+    }
+
+    50% {
+        left: 30%;
+        width: 0%
+    }
+
+    75% {
+        width: 30%;
+        left: 0
+    }
+
+    to {
+        width: 0%
+    }
+}
+
+@keyframes preloaderRight-toCenter {
+    from {
+        width: 0%
+    }
+
+    25% {
+        width: 30%;
+        right: 0
+    }
+
+    50% {
+        right: 30%;
+        width: 0%
+    }
+
+    75% {
+        width: 30%;
+        right: 0
+    }
+
+    to {
+        width: 0%
+    }
+}
+
+@keyframes preloaderHr-circle {
+    from {
+        left: 30%;
+        width: 40%;
+        transform: rotateZ(0)
+    }
+
+    40% {
+        transform: rotateZ(180deg)
+    }
+
+    to {
+        transform: rotateZ(180deg)
+    }
+}
+
+
+
 //headanimate
 @keyframes MainHead {
     from {
@@ -270,3 +348,136 @@
     }
 }
 
+//Portfolio
+@keyframes Portfolioitem {
+    from {
+        width: 0%;
+        height: 1px;
+        left: 0px;
+    }
+    12% {
+        width: 100%;
+        height: 1px;
+        left: 0px;
+    }
+    13% {
+        left: unset;
+        right: 0px;
+    }
+    25% {
+        width: 1px;
+        height: 1px;
+    }
+    38% {
+        right: 0px;
+        height: 100%;
+        top: 0px;
+    }
+    39% {
+        top:unset;
+        bottom:0px;
+    }
+    50% {
+        height: 1px;
+        width: 1px;
+    }
+    63% {
+        width: 100%;
+        left: unset;
+    }
+    64% {
+        left: 0px;
+        top: unset;
+    }
+    76% {
+        width: 1px;
+        height: 1px;
+        top: unset;
+        bottom: 0px;
+    }
+    88% {
+        top: unset;
+        bottom: 0px;
+        height: 100%;
+        width: 1px;
+    }
+    89% {
+        top: 0px;
+    }
+    to {
+        height: 1px;
+        width: 1px;
+    }
+}
+
+@keyframes PortfolioitemRevrs {
+    from {
+        width: 0%;
+        height: 1px;
+        left: unset;
+        right: 0px;
+        top: unset;
+        bottom: 0px;
+    }
+    12% {
+        width: 100%;
+        height: 1px;
+        left: unset;
+        right: 0px;
+    }
+    13% {
+        left: 0px;
+    }
+    25% {
+        width: 1px;
+        height: 1px;
+    }
+    38% {
+        height: 100%;
+        top: unset;
+    }
+    39% {
+        top: 0px;
+    }
+    50% {
+        height: 1px;
+        width: 1px;
+    }
+    63% {
+        width: 100%;
+        left: 0px;
+    }
+    64% {
+        left: unset;
+        right: 0px;
+    }
+    76% {
+        width: 1px;
+        height: 1px;
+    }
+    88% {
+        top: 0px;
+        height: 100%;
+        width: 1px;
+    }
+    89% {
+        top: unset;
+        bottom: 0px;
+    }
+    to {
+        height: 1px;
+        width: 1px;
+        top: unset;
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
+@keyframes Blur {
+    from {
+        filter: blur(0px);
+    }
+    to {
+        filter: blur(2px);
+    }
+}

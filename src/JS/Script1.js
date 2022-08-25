@@ -63,8 +63,8 @@ function reloadSlide (elem, ar) {
         if (j==reloaditer && i <2) {
             item.style.display = "block";
             item.style.transform = "translateX(0px)";
-            if (ar == 0) {item.style.animation = "backInRight 1s";}
-            if (ar == 1) {item.style.animation = "backInLeft 1s";}
+            if (ar == 0) {item.style.animation = "backInRight 0.5s";}
+            if (ar == 1) {item.style.animation = "backInLeft 0.5s";}
             reloaditer++;
             if (reloaditer == elem.length) {reloaditer = 0;}
             i++;
