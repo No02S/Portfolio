@@ -1,4 +1,5 @@
 .hrs {
+    display: none;
     position: absolute;
     background-color: $main-color;
     margin: 0px;
@@ -21,23 +22,28 @@
         &_about {
             top: 0px;
             left: 24px;
-            // height: calc(28% - 190px);
-            animation: VertAbout 2s 1.91s ease-in forwards;
+            height: 0px;
+            transition: 2s all;
+            // animation: VertAbout 2s 1.91s ease-in forwards;
             
         }   
         &_about-right {
             top: 219px;     
             right: 27px;     
+            transition: 10s all;
+            height: 0px;
             // height: calc(100% - 169px);
             // animation: VertAboutRight 10s 5.9s ease-out forwards;
-            animation: VertAboutRight 10s 6.2s ease-out forwards;
+            // animation: VertAboutRight 10s 6.2s ease-out forwards;
         } 
         &_about-undertitle {
             bottom: -6px;
             left: calc(50% - 77px);
+            height: 0px;
+            transition: 1s all;
             // height: 16px;
             // animation: VertUnTitle 1s 5.1s ease forwards;
-            animation: VertUnTitle 1s 5.6s ease forwards;
+            // animation: VertUnTitle 1s 5.6s ease forwards;
         } 
         &_layers {
             top: 60px;
@@ -86,9 +92,9 @@
         &_about {
             top: 219px;
             left: 24px;
-            // width: calc(100% - 52px);
-            // animation: HorAbout 2s 3.9s ease-in forwards;
-            animation: HorAbout 2s 2.6s ease-in forwards;
+            width: 0px;
+            transition: 2s all;
+            // animation: HorAbout 2s 2.6s ease-in forwards;
         } 
         &_title {
             top: 16px;
@@ -149,7 +155,7 @@
         }
         &__horizontal {   
             &_about {
-                animation: HorAbout-1186 2s 3.9s ease-in forwards;
+                // animation: HorAbout-1186 2s 3.9s ease-in forwards;
             }
         }
     }
@@ -185,16 +191,15 @@
         &__vertical {
             &_about-right {
                 top: 168px;
-                animation: VertAboutRight-768 10s 5.9s ease-out forwards;
+                // animation: VertAboutRight-768 10s 5.9s ease-out forwards;
             }
             &_about {
-                animation: VertAbout-768 2s 1.91s ease-in forwards;
-                
+                // animation: VertAbout-768 2s 1.91s ease-in forwards;
             }   
             &_about-undertitle {
                 bottom: -23px;
                 left: calc(50% - 65px);
-                animation: VertUnTitle-768 1s 5.1s ease forwards;
+                // animation: VertUnTitle-768 1s 5.1s ease forwards;
             }
             &_layers {
                 top: 50px;
@@ -235,7 +240,7 @@
         }
         &__horizontal {   
             &_about {
-                animation: HorAbout-600 2s 3.9s ease-in forwards;
+                // animation: HorAbout-600 2s 3.9s ease-in forwards;
             }
             &_subtitle-foot {
                 left: 12px;

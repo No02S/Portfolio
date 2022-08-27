@@ -9,6 +9,7 @@
     &__title {
         display: block;
         @include circle50;
+        transition: 0.5s all
     }
     &__center {
         @include circle50-2;
