@@ -19,67 +19,9 @@
         width: 80%;
         height: 50px;
         svg {
-            //GULP GULP GULP GULP GULP GULP
-            &.GULP {
-                path {fill:#d39897;}
-            }
-            //GULP GULP GULP GULP GULP GULP
-
-            //Photoshop Photoshop Photoshop Photoshop
-            .Psbackground {fill: #233341;}
-            .P, .S {fill:#9ed6ff;}
-            //Photoshop Photoshop Photoshop Photoshop
-
-            //Figma Figma Figma Figma
-            .Figma {fill:#b3b2b2;}
-            .st0{fill:#b3e9ff;}
-            .st1{fill:#96ceb8;}
-            .st2{fill:#fcd2cd;}
-            .st3{fill:#eca691;}
-            .st4{fill:#d5b7fc;}
-            //Figma Figma Figma Figma
-
-            // VS VS VS VS VS VS VS
-            .VS1 {fill:#8caec4;}
-            .VS2 {fill:#7c9aaf;}
-            .VS3 {fill:#819fb1;}
-            .VS4 {fill:#98b9ce;}
-            // VS VS VS VS VS VS VS
-
-            // GIT GIT GIT GIT GIT
-            .GIT {fill: #dba8a0;}
-            // GIT GIT GIT GIT GIT
+            @include svgNotActive;
             &:hover {
-                //GULP GULP GULP GULP GULP GULP
-                &.GULP {
-                    path {fill:#D34A47;}
-                }
-                //GULP GULP GULP GULP GULP GULP
-
-                //Photoshop Photoshop Photoshop Photoshop
-                .Psbackground {fill: #001E36;}
-                .P, .S {fill:#31A8FF;}
-                //Photoshop Photoshop Photoshop Photoshop
-
-                //Figma Figma Figma Figma
-                .Figma {fill:#E0E0E0;}
-                .st0{fill:#1ABCFE;}
-                .st1{fill:#0ACF83;}
-                .st2{fill:#FF7262;}
-                .st3{fill:#F24E1E;}
-                .st4{fill:#A259FF;}
-                //Figma Figma Figma Figma
-
-                // VS VS VS VS VS VS VS
-                .VS1 {fill:#2489ca;}
-                .VS2 {fill:#1070b3;}
-                .VS3 {fill:#0877b9;}
-                .VS4 {fill:#3c99d4;}
-                // VS VS VS VS VS VS VS
-
-                // GIT GIT GIT GIT GIT
-                .GIT {fill: #DE4C36;}
-                // GIT GIT GIT GIT GIT
+                @include svgActive;
             }
         }
     }
@@ -248,71 +190,12 @@
 @media (max-width:768px) {
     .skills {  
         &__tools {
-            width: 90%;
             svg {
                 &:hover {
-                    //GULP GULP GULP GULP GULP
-                    &.GULP {
-                        path {fill:#d39897;}
-                    }
-                    //GULP GULP GULP GULP GULP
-
-                    //Photoshop Photoshop Photoshop Photoshop
-                    .Psbackground {fill: #233341;}
-                    .P, .S {fill:#9ed6ff;}
-                    //Photoshop Photoshop Photoshop Photoshop
-
-                    //Figma Figma Figma Figma
-                    .Figma {fill:#b3b2b2;}
-                    .st0{fill:#b3e9ff;}
-                    .st1{fill:#96ceb8;}
-                    .st2{fill:#fcd2cd;}
-                    .st3{fill:#eca691;}
-                    .st4{fill:#d5b7fc;}
-                    //Figma Figma Figma Figma
-
-                    // VS VS VS VS VS VS VS
-                    .VS1 {fill:#8caec4;}
-                    .VS2 {fill:#7c9aaf;}
-                    .VS3 {fill:#819fb1;}
-                    .VS4 {fill:#98b9ce;}
-                    // VS VS VS VS VS VS VS
-
-                    // GIT GIT GIT GIT GIT
-                    .GIT {fill: #dba8a0;}
-                    // GIT GIT GIT GIT GIT
+                    @include svgNotActive;
                 }
                 &:active {
-                    //GULP GULP GULP GULP GULP
-                    &.GULP {
-                        path {fill:#D34A47;}
-                    }
-                    //GULP GULP GULP GULP GULP
-
-                    //Photoshop Photoshop Photoshop Photoshop
-                    .Psbackground {fill: #001E36;}
-                    .P, .S {fill:#31A8FF;}
-                    //Photoshop Photoshop Photoshop Photoshop
-
-                    //Figma Figma Figma Figma
-                    .Figma {fill:#E0E0E0;}
-                    .st0{fill:#1ABCFE;}
-                    .st1{fill:#0ACF83;}
-                    .st2{fill:#FF7262;}
-                    .st3{fill:#F24E1E;}
-                    .st4{fill:#A259FF;}
-                    //Figma Figma Figma Figma
-
-                    // VS VS VS VS VS VS VS
-                    .VS1 {fill:#2489ca;}
-                    .VS2 {fill:#1070b3;}
-                    .VS3 {fill:#0877b9;}
-                    .VS4 {fill:#3c99d4;}
-                    // VS VS VS VS VS VS VS
-
-                    // GIT GIT GIT GIT GIT
-                    .GIT {fill: #DE4C36;}
-                    // GIT GIT GIT GIT GIT
+                    @include svgActive;
                 }
             }
         }
@@ -427,17 +310,19 @@
             }
         }
         &__tools {
+            width: 95%;
             height: auto;
             margin-top: 100px;
             justify-content: space-around;
             svg {
                 transition: 1s all;
                 display: none;
-                height: 70px;
+                height: 50px;
             }
         }
     }
 }
+
 @media (max-width:480px) {
     .skills {
         &__item {
@@ -450,20 +335,16 @@
                 }
             }
         }
-        
     }
 }
-@media (max-width:410px) {
-    .skills {  
-        &__tools {
-            svg {
-                height: 50px;
-            }
-        }
-    }
-}
+
 @media (max-width:390px) {
     .skills {
+        &__tools {
+            svg {
+                height: 40px;
+            }
+        }
         p.secondStroke {
             padding-left: 0px;
         }

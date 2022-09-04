@@ -113,3 +113,84 @@
         transform: rotate(-45deg);
     }
 }
+
+
+//SVG 
+
+@mixin svgActive {
+    //WEBPACK WEBPACK WEBPACK WEBPACK
+    .webWhite {fill: #fff;}
+    .webOut {fill: #8ED6FB;}
+    .webIn {fill: #1C78C0;}
+    //WEBPACK WEBPACK WEBPACK WEBPACK
+
+    //GULP GULP GULP GULP GULP GULP
+    &.GULP {
+        path {fill:#D34A47;}
+    }
+    //GULP GULP GULP GULP GULP GULP
+
+    //Photoshop Photoshop Photoshop Photoshop
+    .Psbackground {fill: #001E36;}
+    .P, .S {fill:#31A8FF;}
+    //Photoshop Photoshop Photoshop Photoshop
+
+    //Figma Figma Figma Figma
+    .Figma {fill:#E0E0E0;}
+    .st0{fill:#1ABCFE;}
+    .st1{fill:#0ACF83;}
+    .st2{fill:#FF7262;}
+    .st3{fill:#F24E1E;}
+    .st4{fill:#A259FF;}
+    //Figma Figma Figma Figma
+
+    // VS VS VS VS VS VS VS
+    .VS1 {fill:#2489ca;}
+    .VS2 {fill:#1070b3;}
+    .VS3 {fill:#0877b9;}
+    .VS4 {fill:#3c99d4;}
+    // VS VS VS VS VS VS VS
+
+    // GIT GIT GIT GIT GIT
+    .GIT {fill: #DE4C36;}
+    // GIT GIT GIT GIT GIT
+}
+
+@mixin svgNotActive {
+    //WEBPACK WEBPACK WEBPACK WEBPACK
+    .webWhite {fill: #fff;}
+    .webOut {fill: #ade0fa;}
+    .webIn {fill: #4791ca;}
+    //WEBPACK WEBPACK WEBPACK WEBPACK
+
+    //GULP GULP GULP GULP GULP GULP
+    &.GULP {
+        path {fill:#d39897;}
+    }
+    //GULP GULP GULP GULP GULP GULP
+
+    //Photoshop Photoshop Photoshop Photoshop
+    .Psbackground {fill: #233341;}
+    .P, .S {fill:#9ed6ff;}
+    //Photoshop Photoshop Photoshop Photoshop
+
+    //Figma Figma Figma Figma
+    .Figma {fill:#b3b2b2;}
+    .st0{fill:#b3e9ff;}
+    .st1{fill:#96ceb8;}
+    .st2{fill:#fcd2cd;}
+    .st3{fill:#eca691;}
+    .st4{fill:#d5b7fc;}
+    //Figma Figma Figma Figma
+
+    // VS VS VS VS VS VS VS
+    .VS1 {fill:#8caec4;}
+    .VS2 {fill:#7c9aaf;}
+    .VS3 {fill:#819fb1;}
+    .VS4 {fill:#98b9ce;}
+    // VS VS VS VS VS VS VS
+
+    // GIT GIT GIT GIT GIT
+    .GIT {fill: #dba8a0;}
+    // GIT GIT GIT GIT GIT
+}
