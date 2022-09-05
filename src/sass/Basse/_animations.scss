@@ -324,16 +324,29 @@
 }
 //ARROW SLIDER 
 
-@keyframes AOpacity {
-    from {  
-        opacity: 1;
+@keyframes ArowLeft {
+    from {
+        left: 0px;
     }
-
+    50% {
+        left: -10px;
+    }
     to {
-        opacity: 0;
+        left: 0px;
     }
 }
 
+@keyframes ArowRight {
+    from {
+        right: 0px;
+    }
+    50% {
+        right: -10px;
+    }
+    to {
+        right: 0px;
+    }
+}
 //SkillsText
 @keyframes skills-text {
     from {  

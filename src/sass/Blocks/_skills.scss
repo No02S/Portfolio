@@ -17,7 +17,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 80%;
-        height: 50px;
+        height: 55px;
         svg {
             @include svgNotActive;
             &:hover {
@@ -189,15 +189,57 @@
 }
 @media (max-width:768px) {
     .skills {  
-        &__tools {
+        &__wraper {
+            margin-top: 150px;
+            position: relative;
+            overflow: hidden;
+            &-overflow {
+                overflow: hidden;
+                margin: 0 auto;
+                width: 84%;
+            }
+        }
+        &__arow {
+            position: absolute;
+            display: block;
+            top:50%;
+            transform: translateY(-50%);
+            z-index: 11;
+            border: none;
+            background-color: unset;
             svg {
-                &:hover {
-                    @include svgNotActive;
-                }
-                &:active {
-                    @include svgActive;
+                path {
+                    fill: $white;
                 }
             }
+            &_left {
+                left: 0px;
+                animation: ArowLeft 0.5s;
+            }
+            &_right {
+                right: 0px;
+                transform: translateY(-50%) scale(-1, 1);
+                animation: ArowRight 0.5s;
+            }
+        }
+        &__tools {
+            width: auto;
+            margin: 0;
+            justify-content: flex-start;
+            .skills_tools-item {
+                flex-shrink: 0;
+                svg {
+
+                    transition: 1s all;
+                    &:hover {
+                        @include svgNotActive;
+                    }
+                    &:active {
+                        @include svgActive;
+                    }
+                }
+            }
+            
         }
         &__grid {
             margin-top: 75px;
@@ -288,43 +330,19 @@
 @media (max-width:600px) {
     .skills {  
         &__wraper {
-            position: relative;
-        }
-        &__arow {
-            position: absolute;
-            display: block;
-            top:50%;
-            transform: translateY(-50%);
-            z-index: 3;
-            svg {
-                path {
-                    fill: $white;
-                }
-            }
-            &_left {
-                left: 0px;
-            }
-            &_right {
-                right: 0px;
-                transform: translateY(-50%) scale(-1, 1);
-            }
-        }
-        &__tools {
-            width: 95%;
-            height: auto;
             margin-top: 100px;
-            justify-content: space-around;
-            svg {
-                transition: 1s all;
-                display: none;
-                height: 50px;
-            }
         }
     }
 }
 
 @media (max-width:480px) {
     .skills {
+        // &__wraper {
+        //     &-overflow {
+        //         width: 86%;
+        //     }
+        // }
+        
         &__item {
             &:last-child {
                 .skills__item-content {
@@ -341,6 +359,7 @@
 @media (max-width:390px) {
     .skills {
         &__tools {
+            height: 40px;
             svg {
                 height: 40px;
             }
